@@ -214,6 +214,8 @@ section{padding:80px 0}
 #kw-app .kw-kachel:hover{border-color:var(--gold)}#kw-app .kw-kachel.an{border:2px solid var(--gold);background:#fbf7f0}
 #kw-app .kw-kachel svg{width:64px;height:48px;display:block;margin:0 auto 8px}
 #kw-app .kw-arten{grid-template-columns:repeat(4,1fr)}
+#kw-app .kw-unter{display:block;font-size:11px;color:#6b7a88;margin-top:2px}
+#kw-app .kw-info{background:#faf5ee;border-left:3px solid var(--gold);padding:12px 14px;font-size:14px;line-height:1.5;margin:0 0 16px}
 @media(max-width:560px){#kw-app .kw-arten{grid-template-columns:repeat(2,1fr)}}
 #kw-app .kw-kachel .st{color:var(--gold);font-size:22px;letter-spacing:2px;display:block;margin-bottom:6px}
 #kw-app .kw-check{display:flex;align-items:center;gap:10px;justify-content:flex-start;padding:14px 16px;text-align:left}
@@ -258,8 +260,9 @@ section{padding:80px 0}
         <button type="button" class="kw-kachel" data-wert="DHH"><svg viewBox="0 0 64 48"><path d="M6 24 21 10l15 14" fill="none" stroke="#9aa6b1" stroke-width="2"/><rect x="9" y="22" width="24" height="22" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><path d="M30 24 45 10l15 14" fill="none" stroke="#374755" stroke-width="3"/><rect x="33" y="22" width="24" height="22" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><rect x="42" y="31" width="7" height="13" fill="#374755"/></svg>Doppelhaushälfte</button>
         <button type="button" class="kw-kachel" data-wert="REH"><svg viewBox="0 0 64 48"><rect x="4" y="18" width="18" height="26" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><rect x="23" y="18" width="18" height="26" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><rect x="42" y="18" width="18" height="26" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><path d="M2 20 32 6l30 14" fill="none" stroke="#374755" stroke-width="2"/><rect x="48" y="33" width="6" height="11" fill="#374755"/></svg>Reihenendhaus</button>
         <button type="button" class="kw-kachel" data-wert="RMH"><svg viewBox="0 0 64 48"><rect x="4" y="18" width="18" height="26" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><rect x="23" y="18" width="18" height="26" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><rect x="42" y="18" width="18" height="26" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><path d="M2 20 32 6l30 14" fill="none" stroke="#374755" stroke-width="2"/><rect x="29" y="33" width="6" height="11" fill="#374755"/></svg>Reihenmittelhaus</button>
-        <button type="button" class="kw-kachel" data-wert="MFH"><svg viewBox="0 0 64 48"><rect x="12" y="4" width="40" height="40" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><g fill="#374755"><rect x="17" y="9" width="6" height="5"/><rect x="29" y="9" width="6" height="5"/><rect x="41" y="9" width="6" height="5"/><rect x="17" y="19" width="6" height="5"/><rect x="29" y="19" width="6" height="5"/><rect x="41" y="19" width="6" height="5"/><rect x="17" y="29" width="6" height="5"/><rect x="41" y="29" width="6" height="5"/><rect x="29" y="32" width="6" height="12"/></g></svg>Mehrfamilienhaus</button>
+        <button type="button" class="kw-kachel" data-wert="MFH"><svg viewBox="0 0 64 48"><rect x="12" y="4" width="40" height="40" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><g fill="#374755"><rect x="17" y="9" width="6" height="5"/><rect x="29" y="9" width="6" height="5"/><rect x="41" y="9" width="6" height="5"/><rect x="17" y="19" width="6" height="5"/><rect x="29" y="19" width="6" height="5"/><rect x="41" y="19" width="6" height="5"/><rect x="17" y="29" width="6" height="5"/><rect x="41" y="29" width="6" height="5"/><rect x="29" y="32" width="6" height="12"/></g></svg>Mehrfamilienhaus<small class="kw-unter">ab 3 Wohneinheiten</small></button>
       </div>
+      <p class="kw-hilfe" style="text-align:center;margin-top:12px">Ab 3 Wohneinheiten gilt ein Haus als Mehrfamilienhaus – auch ein selbst bewohntes Dreiparteienhaus.</p>
       <div class="kw-vorteile"><span>Unverbindlich</span><span>Unabhängig</span><span>Zuverlässig</span></div>
     </div>
 
@@ -277,6 +280,7 @@ section{padding:80px 0}
 
     <div class="kw-schritt" data-s="groesse">
       <h2>Immobiliengröße</h2><p class="kw-frage" id="kw-groesse-frage">Wie groß ist die Wohn- und Grundstücksfläche?</p>
+      <div class="kw-info nur-mfh"><b>Hinweis zum Mehrfamilienhaus:</b> Mehrfamilienhäuser (ab 3 Wohneinheiten, auch wenn sie selbst bewohnt sind) werden nach dem <b>Ertragswertverfahren</b> bewertet – entscheidend sind also vor allem die Mieteinnahmen. Eine automatische Online-Zahl wäre hier nicht seriös. Deshalb erstellt Martin Krüger Ihnen nach Ihren Angaben <b>persönlich</b> eine Einschätzung und meldet sich innerhalb von 24 Stunden (werktags).</div>
       <div class="kw-zwei">
         <div class="kw-feld nur-wohnen"><label>Wohnfläche (m²) *</label><input name="wfl" inputmode="decimal" placeholder="z. B. 120"><input type="range" min="10" max="500" value="120" data-fuer="wfl"></div>
         <div class="kw-feld nur-grund"><label>Grundstücksfläche (m²) <span class="pflicht-grund">*</span></label><input name="grund" inputmode="decimal" placeholder="z. B. 450"><input type="range" min="0" max="1500" value="450" data-fuer="grund"></div>
@@ -413,6 +417,7 @@ section{padding:80px 0}
     var a = art(), haus = a !== 'ETW';
     $$('.nur-wohnung').forEach(function (e) { e.style.display = a === 'ETW' ? '' : 'none'; });
     $$('.nur-grund').forEach(function (e) { e.style.display = haus ? '' : 'none'; });
+    $$('.nur-mfh').forEach(function (e) { e.style.display = a === 'MFH' ? '' : 'none'; });
     $('#kw-groesse-frage').textContent = haus ? 'Wie groß ist die Wohn- und Grundstücksfläche?' : 'Wie groß ist die Wohnfläche?';
     $('#kw-etagen-frage').textContent = a === 'ETW' ? 'In welcher Etage liegt die Wohnung?' : 'Wie viele Etagen hat das Haus?';
     $('#kw-fuss').style.display = s === 'art' || s === 'erstellt' || s === 'kontakt' ? 'none' : 'flex';
