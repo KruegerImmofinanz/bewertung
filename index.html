@@ -213,6 +213,8 @@ section{padding:80px 0}
 #kw-app .kw-kachel{border:1px solid var(--rand);border-radius:10px;background:#fff;padding:16px 10px 12px;cursor:pointer;text-align:center;font:inherit;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:.15s}
 #kw-app .kw-kachel:hover{border-color:var(--gold)}#kw-app .kw-kachel.an{border:2px solid var(--gold);background:#fbf7f0}
 #kw-app .kw-kachel svg{width:64px;height:48px;display:block;margin:0 auto 8px}
+#kw-app .kw-arten{grid-template-columns:repeat(4,1fr)}
+@media(max-width:560px){#kw-app .kw-arten{grid-template-columns:repeat(2,1fr)}}
 #kw-app .kw-kachel .st{color:var(--gold);font-size:22px;letter-spacing:2px;display:block;margin-bottom:6px}
 #kw-app .kw-check{display:flex;align-items:center;gap:10px;justify-content:flex-start;padding:14px 16px;text-align:left}
 #kw-app .kw-check i{width:16px;height:16px;border:1px solid #b9c3cc;border-radius:3px;flex:none;display:inline-block}
@@ -249,19 +251,16 @@ section{padding:80px 0}
 
     <div class="kw-schritt" data-s="art">
       <h2>Immobilienbewertung</h2><p class="kw-frage">Welche Immobilie möchten Sie bewerten lassen?</p>
-      <div class="kw-kacheln" data-wahl="typ" data-weiter="1">
+      <div class="kw-kacheln kw-arten" data-wahl="typ" data-weiter="1">
         <button type="button" class="kw-kachel" data-wert="ETW"><svg viewBox="0 0 64 48"><rect x="18" y="6" width="28" height="38" rx="2" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><g fill="#374755"><rect x="23" y="11" width="6" height="5"/><rect x="35" y="11" width="6" height="5"/><rect x="23" y="21" width="6" height="5"/><rect x="35" y="21" width="6" height="5"/><rect x="29" y="33" width="6" height="11"/></g></svg>Wohnung</button>
-        <button type="button" class="kw-kachel" data-wert="HAUS"><svg viewBox="0 0 64 48"><path d="M10 24 32 6l22 18" fill="none" stroke="#374755" stroke-width="3"/><rect x="16" y="22" width="32" height="22" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><rect x="28" y="31" width="8" height="13" fill="#374755"/></svg>Haus</button>
+        <button type="button" class="kw-kachel" data-wert="EFH"><svg viewBox="0 0 64 48"><path d="M14 24 32 8l18 16" fill="none" stroke="#374755" stroke-width="3"/><rect x="19" y="22" width="26" height="22" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><rect x="29" y="31" width="7" height="13" fill="#374755"/></svg>Einfamilienhaus</button>
+        <button type="button" class="kw-kachel" data-wert="ZFH"><svg viewBox="0 0 64 48"><path d="M14 20 32 4l18 16" fill="none" stroke="#374755" stroke-width="3"/><rect x="19" y="18" width="26" height="26" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><line x1="19" y1="31" x2="45" y2="31" stroke="#374755" stroke-width="2"/><g fill="#374755"><rect x="24" y="22" width="5" height="5"/><rect x="35" y="22" width="5" height="5"/><rect x="29" y="35" width="7" height="9"/></g></svg>Zweifamilienhaus</button>
+        <button type="button" class="kw-kachel" data-wert="DHH"><svg viewBox="0 0 64 48"><path d="M6 24 21 10l15 14" fill="none" stroke="#9aa6b1" stroke-width="2"/><rect x="9" y="22" width="24" height="22" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><path d="M30 24 45 10l15 14" fill="none" stroke="#374755" stroke-width="3"/><rect x="33" y="22" width="24" height="22" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><rect x="42" y="31" width="7" height="13" fill="#374755"/></svg>Doppelhaushälfte</button>
+        <button type="button" class="kw-kachel" data-wert="REH"><svg viewBox="0 0 64 48"><rect x="4" y="18" width="18" height="26" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><rect x="23" y="18" width="18" height="26" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><rect x="42" y="18" width="18" height="26" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><path d="M2 20 32 6l30 14" fill="none" stroke="#374755" stroke-width="2"/><rect x="48" y="33" width="6" height="11" fill="#374755"/></svg>Reihenendhaus</button>
+        <button type="button" class="kw-kachel" data-wert="RMH"><svg viewBox="0 0 64 48"><rect x="4" y="18" width="18" height="26" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><rect x="23" y="18" width="18" height="26" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><rect x="42" y="18" width="18" height="26" fill="#eef1f4" stroke="#9aa6b1" stroke-width="2"/><path d="M2 20 32 6l30 14" fill="none" stroke="#374755" stroke-width="2"/><rect x="29" y="33" width="6" height="11" fill="#374755"/></svg>Reihenmittelhaus</button>
+        <button type="button" class="kw-kachel" data-wert="MFH"><svg viewBox="0 0 64 48"><rect x="12" y="4" width="40" height="40" fill="#dfe6ee" stroke="#374755" stroke-width="2"/><g fill="#374755"><rect x="17" y="9" width="6" height="5"/><rect x="29" y="9" width="6" height="5"/><rect x="41" y="9" width="6" height="5"/><rect x="17" y="19" width="6" height="5"/><rect x="29" y="19" width="6" height="5"/><rect x="41" y="19" width="6" height="5"/><rect x="17" y="29" width="6" height="5"/><rect x="41" y="29" width="6" height="5"/><rect x="29" y="32" width="6" height="12"/></g></svg>Mehrfamilienhaus</button>
       </div>
       <div class="kw-vorteile"><span>Unverbindlich</span><span>Unabhängig</span><span>Zuverlässig</span></div>
-    </div>
-
-    <div class="kw-schritt" data-s="haustyp">
-      <p class="kw-frage" style="margin-top:6px">Bitte wählen Sie den Haustyp.</p>
-      <div class="kw-kacheln" data-wahl="haustyp" data-weiter="1">
-        <button type="button" class="kw-kachel" data-wert="EZFH">Ein- / Zweifamilienhaus</button>
-        <button type="button" class="kw-kachel" data-wert="MFH">Mehrfamilienhaus</button>
-      </div>
     </div>
 
     <div class="kw-schritt" data-s="hausart">
@@ -400,12 +399,11 @@ section{padding:80px 0}
   var fehler = $('#kw-fehler'), weiter = $('#kw-weiter'), zurueck = $('#kw-zurueck');
   var wert = function (n) { var e = f.elements[n]; return e ? String(e.value || '').trim() : ''; };
   var num = function (n) { var s = wert(n); s = /^\d{1,3}(\.\d{3})+$/.test(s) ? s.replace(/\./g, '') : s.replace(',', '.'); return Number(s); };
-  function art() { return w.typ === 'ETW' ? 'ETW' : w.haustyp === 'MFH' ? 'MFH' : w.hausart || 'EFH'; }
+  function art() { return w.typ === 'ZFH' ? 'EFH' : (w.typ || 'EFH'); }
   function berechnePfad() {
     var p = ['art'];
-    if (w.typ === 'HAUS') { p.push('haustyp'); if (w.haustyp === 'EZFH') p.push('hausart'); }
     p.push('groesse', 'zimmer', 'etagen', 'baujahr', 'zustand', 'parken', 'standard', 'extras', 'nutzung', 'adresse', 'erstellt', 'kontakt');
-    if (w.haustyp === 'MFH') p = p.filter(function (s) { return ['zimmer', 'standard', 'extras'].indexOf(s) < 0; });
+    if (w.typ === 'MFH') p = p.filter(function (s) { return ['zimmer', 'standard', 'extras'].indexOf(s) < 0; });
     return p;
   }
   function zeige(n) {
@@ -466,7 +464,7 @@ section{padding:80px 0}
     var o = { art: a, strasse: wert('strasse'), plz: wert('plz'), ort: wert('ort'), wfl: wert('wfl'), grund: wert('grund'), zimmer: wert('zimmer'), geschosse: wert('geschosse'),
       baujahr: wert('baujahr'), modern: wert('modern'), zustand: w.zustand, parken: w.parken.filter(function (x) { return x !== 'kein'; }), standard: w.standard || 'mittel',
       extras: ex, nutzung: w.nutzung || 'eigen' };
-    if (a === 'ETW') { o.etage = wert('etage'); o.weAnzahl = wert('weAnzahl'); } else o.einheiten = wert('einheiten');
+    if (a === 'ETW') { o.etage = wert('etage'); o.weAnzahl = wert('weAnzahl'); } else o.einheiten = w.typ === 'ZFH' ? '2' : '1';
     return { anfrageId: id, startMs: startMs, hp: wert('hp'), objekt: o,
       kontakt: { anrede: w.anrede, vorname: wert('vorname'), nachname: wert('nachname'), email: wert('email'), telefon: wert('telefon'), einwilligung: f.elements.einwilligung.checked,
         einwilligungText: document.getElementById('kw-einw').textContent.trim().slice(0, 140) + ' – ' + new Date().toLocaleString('de-DE') } };
